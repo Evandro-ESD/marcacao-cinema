@@ -1,0 +1,12 @@
+<button
+  type="button"
+  class="seat"
+  [class.selected]="selected()"
+  [class.reserved]="seat().status === 'reserved'"
+  [class.sold]="seat().status === 'sold'"
+  [class.blocked]="seat().status === 'blocked'"
+  [disabled]="seat().status !== 'available'"
+  (click)="onClick()"
+>
+  {{ seat().row }}{{ seat().number }}
+</button>

@@ -1,0 +1,239 @@
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+   ========================= */
+
+.top-bar {
+  height: 40px;
+  background-color: #252525;
+  color: #ffffff;
+}
+
+.top-bar-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Redes sociais */
+
+.social-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.social-area a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 16px;
+}
+
+
+/* Portal do aluno */
+
+.portal-button {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 25px;
+
+  background-color: #16d64f;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background-color 0.2s;
+}
+
+.portal-button:hover {
+  background-color: #10b941;
+}
+
+.portal-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+
+/* =========================
+   MENU PRINCIPAL
+   ========================= */
+
+.main-nav {
+  height: 92px;
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.nav-content {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+
+  width: 265px;
+  height: auto;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.navigation a {
+  color: #666666;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: color 0.2s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: #5ca86b;
+}
+
+
+/* Itens com submenu */
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  font-size: 14px;
+}
+
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+main {
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  min-width: 260px;
+  box-shadow: 0 14px 22px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #008744;
+  border-radius: 0 0 6px 6px;
+  z-index: 20;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu,
+.nav-item .dropdown-menu:hover,
+.nav-item .dropdown-menu:focus-within {
+  display: block;
+}
+
+.nav-item {
+  padding-bottom: 0;
+}
+
+.dropdown-menu {
+  top: 100%;
+}
+
+.dropdown-menu .nav-item {
+  width: 100%;
+}
+
+.dropdown-menu .nav-item + .nav-item {
+  border-top: 1px dashed #e2e8f0;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  color: #4a5568;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #f8fafc;
+  color: #008744;
+  outline: none;
+}

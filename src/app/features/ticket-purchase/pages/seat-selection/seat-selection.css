@@ -1,0 +1,66 @@
+.seat-selection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.screen {
+  margin: 30px auto;
+  padding: 12px;
+  max-width: 500px;
+
+  text-align: center;
+
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  gap: 12px;
+
+  justify-content: center;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.seat.selected {
+  background: #2196f3;
+  color: white;
+}
+
+.seat.reserved {
+  background: #ffc107;
+  cursor: not-allowed;
+}
+
+.seat.sold {
+  background: #f44336;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat.blocked {
+  background: #333;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat:not(.selected):not(.reserved):not(.sold):not(.blocked) {
+  background: #4caf50;
+}
+
+.summary {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}

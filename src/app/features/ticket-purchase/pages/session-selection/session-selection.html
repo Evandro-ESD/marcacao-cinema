@@ -1,0 +1,52 @@
+<section class="session-selection">
+
+  <header class="page-header">
+    <h1>Compra de Ingressos</h1>
+
+    <p>
+      Escolha o evento e a sessão desejada.
+    </p>
+  </header>
+
+  <div class="session-grid">
+
+    @for (session of sessions; track session.id) {
+
+      <article class="session-card">
+
+        <h2>
+          {{ session.eventName }}
+        </h2>
+
+        <div class="session-info">
+          <p>
+            <strong>Data:</strong>
+            {{ session.date }}
+          </p>
+
+          <p>
+            <strong>Horário:</strong>
+            {{ session.time }}
+          </p>
+
+          <p>
+            <strong>Local:</strong>
+            {{ session.venue }}
+          </p>
+        </div>
+
+        <a
+          [routerLink]="['/comprar', session.id]"
+          class="buy-button">
+
+          Escolher lugares
+
+        </a>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>

@@ -1,0 +1,60 @@
+<section class="seat-selection">
+
+  <header>
+    <h1>Escolha seus lugares</h1>
+
+    <p>
+      Sessão: {{ sessionId }}
+    </p>
+  </header>
+
+  <div class="screen">
+    TELA
+  </div>
+
+  <div class="summary">
+
+    <h2>Resumo</h2>
+
+    <p>
+      Lugares selecionados:
+      {{ selectedSeats().length }}
+    </p>
+
+    @if (selectedSeats().length > 0) {
+
+      <p>
+        @for (seat of selectedSeats(); track seat.id) {
+          {{ seat.row }}{{ seat.number }}
+        }
+      </p>
+
+      <button
+        type="button"
+        (click)="comprar()">
+
+        Comprar
+
+      </button>
+
+    }
+
+  </div>
+
+</section>
+
+<div class="seat-map">
+
+  @for (seat of seats; track seat.id) {
+
+    <app-seat
+      [seat]="seat"
+      [selected]="isSelected(seat)"
+      (seatClicked)="toggleSeat($event)"
+    />
+
+  }
+
+</div>
+
+<app-seat-legend />

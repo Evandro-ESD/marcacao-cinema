@@ -1,0 +1,94 @@
+﻿<header class="site-header">
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="header-container top-bar-content">
+
+            <div class="social-area">
+                <span>Siga Nossas Redes Sociais</span>
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    ◎
+                </a>
+            </div>
+
+            <a href="#" class="portal-button">
+                <span class="portal-icon">↪</span>
+                Acesse aqui o Portal do Aluno
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- Barra principal -->
+    <div class="main-nav">
+        <div class="header-container nav-content">
+
+            <!-- Logo -->
+            <a routerLink="/" class="logo">
+                <img src="assets/images/logo-cejfm.png" alt="CEJFM">
+            </a>
+
+
+            <!-- Menu -->
+            <nav class="navigation">
+
+                <a routerLink="/" routerLinkActive="active">
+                    Home
+                </a>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Institucional
+                        <span class="arrow">⌄</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                                               
+                        <li class="nav-item">
+                            <a [routerLink]="['/comprar', sessions[0].id]" class="nav-link">Compra de Ingressos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Níveis de Ensino
+                        <span class="arrow">⌄</span>
+                    </a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Acadêmico
+                        <span class="arrow">⌄</span>
+                    </a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">
+                        Unidades
+                        <span class="arrow">⌄</span>
+                    </a>
+                </div>
+
+                <a routerLink="/contato">
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+    </div>
+
+</header>
+
+
+<!-- Conteúdo das rotas -->
+<main>
+   <router-outlet />
+</main>

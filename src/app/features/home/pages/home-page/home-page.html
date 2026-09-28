@@ -1,0 +1,49 @@
+<section class="home">
+
+  <div class="hero">
+    <h1>CEJFM</h1>
+
+    <p>
+      Escolha seu evento e garanta seu ingresso.
+    </p>
+  </div>
+
+  <section class="sessions">
+
+    <h2>Eventos disponíveis</h2>
+
+    <div class="session-grid">
+
+      @for (session of sessions; track session.id) {
+
+        <article class="session-card">
+
+          <h3>
+            {{ session.eventName }}
+          </h3>
+
+          <p>
+            {{ session.date }} às {{ session.time }}
+          </p>
+
+          <p>
+            {{ session.venue }}
+          </p>
+
+          <a
+            [routerLink]="['/comprar', session.id]"
+            class="buy-button">
+
+            Comprar ingressos
+
+          </a>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
+
+</section>
